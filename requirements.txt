@@ -1,0 +1,5 @@
+click==8.1.7
+GDAL==3.4.3
+numpy==1.24.3
+pandas==2.2.3
+skimage==0.21.0
