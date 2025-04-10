@@ -16,22 +16,22 @@ python sampling.py --image_path D:\data\image.tif --lc_path D:\data\land_cover.t
 
 **1. Data preparation**
 
-Prepare the remote sensing image data of the study area along with the corresponding land cover products, ensuring both are in the same coordinate system. The remote sensing image will be converted to `uint8` format with `process_image=True` before further processing. 
+Prepare the remote sensing image data of the study areas along with the corresponding land cover products, ensuring both are in the same coordinate system. The remote sensing image will be converted to `uint8` format with `process_image=True` before further processing. 
 
 **2. Generate candidate total samples**
 
-The remote sensing images are cropped into candidate samples, which are then categorized based on two-dimensional metrics: percentage and edge intensity. 
+The remote sensing images are cropped into candidate samples, which are then categorized based on two-dimensional metrics: entropy (H) and edge intensity (E). 
 
 - `sample_size` refers to the size of the image sample, with a default of 256×256 pixels. 
 
 - `rgb_bands` refers to the channel number of the red, green, and blue bands in the remote sensing image, which are required for edge detection when extracting edge intensity from true-color images. 
 
-- `zero_percent` is used to filter out samples consisting entirely of zeros. Samples are retained only if the percentage of zeros is below the threshold. 
+- `zero_percent` is used to filter out samples consisting entirely of zeros (no data). Samples are retained only if the percentage of zeros is below the threshold. 
 
 **3. Select training samples**
 
 Using the strategic sample selection method to select training samples, and the optimal sample size is 4%.
 
-- `sample_percent` refers to the proportion of samples selected. According to our study, the optimal sample size is 4%. The default value is set to 0.04. 
+- `sample_percent` refers to the proportion of samples selected. According to our study, the optimal sample size is 3%. The default value is set to 0.03. 
 
-![](https://github.com/Remote-Sensing-of-Land-Resource-Lab/Training-Sample-Selection/blob/main/figures/selection1.png)
+![](https://github.com/Remote-Sensing-of-Land-Resource-Lab/Training-Sample-Selection/blob/main/figures/balancedSampling.png)
