@@ -8,7 +8,7 @@ import shutil
 def sample_select(sample_count,
                   temp_folder,
                   sample_folder,
-                  sample_percent=0.04,
+                  sample_percent=0.03,
                   delete_temp_folder=True):
     file_number = np.sum(sample_count)
     select_number = np.ceil(file_number * sample_percent)

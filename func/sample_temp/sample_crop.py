@@ -33,7 +33,17 @@ def level_target(sample, sample_geo, lc, lc_geo):
 
     target_area = lc[h1:h2, w1:w2]
     target_level = np.sum(target_area / 255) / (target_area.shape[0] * target_area.shape[1])
-    return target_level
+
+    entropy = cross_entropy(target_level)
+    return entropy
+
+
+def cross_entropy(p, epsilon=1e-10):
+    assert 0 <= p <= 1, 'p should be in [0, 1]'
+    p = np.clip(p, epsilon, 1. - epsilon)
+    q = 1 - p
+    entropy = - p * np.log2(p) - q * np.log2(q)
+    return entropy
 
 
 def level_edge(sample, sigma=2.0, f=10):
@@ -178,6 +188,3 @@ def sample_crop(image_path,
     if delete_temp_tif:
         os.remove(image_path)
         os.remove(lc_path)
-
-
-
