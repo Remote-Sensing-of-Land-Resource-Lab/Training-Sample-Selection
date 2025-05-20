@@ -35,7 +35,7 @@ from func.sample_selection import sample_select
               help='Size of the sample (bands, size, size)')
 @click.option('--zero_percent', type=float, default=0.2,
               help='Save samples that are all 0 (no data in image) with the probability, values (0-1).')
-@click.option('--sample_percent', type=float, default=0.03,
+@click.option('--sample_percent', type=float, default=0.025,
               help='Percentage of samples selected, values (0-1).')
 @click.option('--delete_temp_tif', type=click.BOOL, default=True,
               help='Whether to delete the image and land cover data generated after processing')
