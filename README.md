@@ -30,8 +30,16 @@ The remote sensing images are cropped into candidate samples, which are then cat
 
 **3. Select training samples**
 
-Using the strategic sample selection method to select training samples, and the optimal sample size is 4%.
+Using the strategic sample selection method to select training samples.
 
-- `sample_percent` refers to the proportion of samples selected. According to our study, the optimal sample size is 3%. The default value is set to 0.03. 
+- `sample_percent` refers to the proportion of samples selected. According to our study, the optimal sample size is 2.5%. The default value is set to 0.025. 
 
 ![](https://github.com/Remote-Sensing-of-Land-Resource-Lab/Training-Sample-Selection/blob/main/figures/balancedSampling.png)
+
+## Citation
+
+Strategic Sampling for Training a Semantic Segmentation Model in Operational Mapping: Case Studies on Cropland Parcel Delineation (under review)
+
+## Contributors
+
+Rui Lu (lurui98@zju.edu.cn), Su Ye 
