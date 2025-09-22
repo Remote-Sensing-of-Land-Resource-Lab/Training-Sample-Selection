@@ -38,7 +38,7 @@ Using the strategic sample selection method to select training samples.
 
 ## Citation
 
-Strategic Sampling for Training a Semantic Segmentation Model in Operational Mapping: Case Studies on Cropland Parcel Delineation (under review)
+Lu, R., Liao, R., Meng, R., Hu, Y., Zhao, Y., Guo, Y., Zhang, Y., Shi, Z., Ye, S., 2025. Strategic sampling for training a semantic segmentation model in operational mapping: Case studies on cropland parcel extraction. Remote Sensing of Environment 331, 115034. https://doi.org/10.1016/j.rse.2025.115034
 
 ## Contributors
 
